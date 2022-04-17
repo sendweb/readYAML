@@ -17,16 +17,13 @@ public class TestCustomer {
         InputStream inputStream = TestCustomer.class.getClassLoader().getResourceAsStream("customer.yaml");
         Map<String, Object> obj = (Map<String, Object>) yaml.load(inputStream);
         System.out.println(obj);
-
-//        Customer customer = yaml.load(inputStream);
-//        System.out.println(customer);
-//
+        System.out.println(obj.get("server"));
 
         // 将list中的数据转成json字符串
         String jsonObject = JSON.toJSONString(obj);
         System.out.println(jsonObject);
         //将json转成需要的对象
-        Customer customer = JSONObject.parseObject(jsonObject, Customer.class);
+        Customer customer = JSONObject.parseObject(jsonObject,Customer.class);
 
         System.out.println(customer);
 

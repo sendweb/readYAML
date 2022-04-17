@@ -9,7 +9,10 @@ import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.FileNotFoundException;
@@ -23,11 +26,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
+@Slf4j
 public class YamlUtil implements HttpHandler {
+//    private static final Logger logger = LoggerFactory.getLogger(getClass());
+    private static final Logger logger = LoggerFactory.getLogger(Thread.currentThread().getStackTrace()[1].getClassName());
     private static final HashMap<Integer, HttpServer> httpServers = new HashMap<Integer, HttpServer>();
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, InstantiationException, IllegalAccessException {
-
+        log.info("这里是log4j");
+        logger.info("这里是log4j");
         InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("service.txt");
         String str = IOUtils.toString(inputStream, StandardCharsets.UTF_8);
         String[] params = str.split("\r\n");
