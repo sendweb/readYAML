@@ -1,0 +1,8 @@
+{port:5000, url:"/test/",cls:"http.server.MyHttpHandler" }
+{port:8000,url:"/test2",cls:"http.server.MyHttpHandler"}
+{port:5000,url:"/test5",cls:"http.server.MyHttpHandler"}
+{port:7000,url:"/test2",cls:"http.server.MyHttpHandler"}
+{port:9000,url:"/stop/",cls:"http.server.YamlUtil"}
+{port:8000,url:"/test8",cls:"http.server.MyHttpHandler"}
+{port:5000,url:"/hello",cls:"http.server.MyHttpHandler"}
+{port:7000,url:"/test7",cls:"http.server.MyHttpHandler"}

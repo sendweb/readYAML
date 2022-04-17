@@ -1,0 +1,9 @@
+http\server\MyService.class
+test\Customer.class
+http\server\YamlUtil.class
+http\server\MyHttpServer.class
+http\server\Server.class
+http\server\HttpService.class
+http\server\Service.class
+test\TestCustomer.class
+http\server\MyHttpHandler.class

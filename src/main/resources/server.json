@@ -1,0 +1,23 @@
+{
+  "port":6000,
+  "services": [
+    {
+      "name":"移动公司中国公司",
+      "enabled":true,
+      "url":"/test2",
+      "cls":"bank.Test2"
+    },
+    {
+      "name":"移动税费",
+      "enabled":false,
+      "url":"/hello2",
+      "cls":"bank.Hello2"
+    },
+    {
+      "name":"移动水分",
+      "enabled":true,
+      "url":"/hello3",
+      "cls":"bank.Hello3"
+    }
+  ]
+}
